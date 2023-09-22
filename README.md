@@ -106,7 +106,7 @@ rails server
 
 To run tests, run the following command:
 
-rspect
+rspec spec
 
 <!-- ### Deployment
 
