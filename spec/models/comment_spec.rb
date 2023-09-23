@@ -9,7 +9,7 @@ RSpec.describe Comment, type: :model do
   end
 
   it "updates post's comments_counter after save" do
-    comment = Comment.create(
+    Comment.create(
       author: @user,
       post: @post
     )
