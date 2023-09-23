@@ -1,5 +1,3 @@
-# spec/models/comment_spec.rb
-
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
@@ -31,14 +29,13 @@ RSpec.describe Comment, type: :model do
   end
 
   it 'should update the comments_counter attribute of a post' do
-    Comment.create(post: @post, author: @user,
-                   text: 'This is the first comment')
+    comment = Comment.create(post: @post, author: @user,
+                             text: 'This is the first comment')
     Comment.create(post: @post, author: @user,
                    text: 'This is the second comment')
 
     comment.comments_updater
-    expected_result = 2
 
-    expect(@post.comments_counter).to eq(expected_result)
+    expect(@post.comments_counter).to eq(2)
   end
 end
