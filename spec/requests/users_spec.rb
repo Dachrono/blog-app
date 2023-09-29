@@ -7,34 +7,34 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET /index' do
-    it "responds with a successful HTTP status" do
+    it 'responds with a successful HTTP status' do
       get @url
       expect(response).to have_http_status(:success)
     end
-    it "renders the index template" do
+    it 'renders the index template' do
       get @url
       expect(response).to render_template(:index)
     end
 
-    it "includes correct placeholder text in the response body" do
+    it 'includes correct placeholder text in the response body' do
       get @url
-      expect(response.body).to include("Here is a list of all users")
+      expect(response.body).to include('Here is a list of all users')
     end
   end
 
   describe 'GET /show' do
-    it "responds with a successful HTTP status" do
+    it 'responds with a successful HTTP status' do
       get user_url(@user)
       expect(response).to have_http_status(:success)
     end
-    it "renders the show template" do
+    it 'renders the show template' do
       get user_url(@user)
       expect(response).to render_template(:show)
     end
 
-    it "includes correct placeholder text in the response body" do
+    it 'includes correct placeholder text in the response body' do
       get user_url(@user)
-      expect(response.body).to include("Here is a description for one user ")
+      expect(response.body).to include('Here is a description for one user ')
     end
   end
 end
