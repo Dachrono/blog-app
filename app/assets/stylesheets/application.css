@@ -14,88 +14,88 @@
  *= require_self
  */
 
- * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
 
-  .container {
-    display: flex;
-    justify-content: center;
-    margin-left: 7.5%;
-    margin-right: 7.5%;
-    margin-top: 30px;
-    flex-direction: row;
-  }
+.container {
+  display: flex;
+  justify-content: center;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  margin-top: 30px;
+  flex-direction: row;
+}
 
-  .margin {
-    padding: 8px;
-    border: 2px solid rgb(95, 93, 93);
-    margin-bottom: 5px;
-  }
+.margin {
+  padding: 8px;
+  border: 2px solid rgb(95, 93, 93);
+  margin-bottom: 5px;
+}
 
-  .button_footer {
-    background-color: transparent;
-    border: 2px solid #000;
-    color: #000;
-    padding: 5px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 50px;
-  }
+.button_footer {
+  background-color: transparent;
+  border: 2px solid #000;
+  color: #000;
+  padding: 5px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
 
 /* user index template */
 
-  .user {
-    justify-content: space-around;
-    display: flex;
-  }
-  
-  .userPhoto {
-    width: 25%;
-    margin-right: 3%;
-    text-align: center;
-  }
-  
-  .userInfo {
-    width: 100%;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .userInfo p {
-    align-self: flex-end;
-  }
+.user {
+  justify-content: space-around;
+  display: flex;
+}
 
-  /* user show template */
+.userPhoto {
+  width: 25%;
+  margin-right: 3%;
+  text-align: center;
+}
 
-  .bio {
-    margin-left: 7.5%;
-    margin-right: 7.5%;
-    padding-bottom: 25px;
-  }
+.userInfo {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
 
-  .posts {
-    display: flex;
-    flex-direction: column;
-    margin-left: 7.5%;
-    margin-right: 7.5%;
-  }
+.userInfo p {
+  align-self: flex-end;
+}
 
-  .posts i{
-    margin-left: auto;
-  }
+/* user show template */
 
-    /* post show template */
+.bio {
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  padding-bottom: 25px;
+}
 
-  .desc {
-    flex-direction: column;
-  }  
+.posts {
+  display: flex;
+  flex-direction: column;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+}
 
-  .desc i{
-    margin-left: auto;
-  }
+.posts i {
+  margin-left: auto;
+}
+
+/* post show template */
+
+.desc {
+  flex-direction: column;
+}
+
+.desc i {
+  margin-left: auto;
+}
