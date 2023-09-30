@@ -5,7 +5,18 @@
 </div>
 
 <div class="posts margin">
+  <h2>Comments</h2>
   <% @post.comments.each do |comment|%>
     <%= "#{comment.author.name}: #{comment.text}"%><br><br>
   <%end%>
+</div>
+
+<div class="form">
+   <%= render 'comments/form' %>
+</div>
+
+<div class="form">
+<%= form_with(model: [@author, @post, @like], url: user_post_likes_path(@author, @post), method: :post) do |form| %>
+  <%= form.submit 'Gift a like', class: 'button_footer' %>
+<% end %>
 </div>
