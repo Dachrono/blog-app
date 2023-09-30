@@ -1,1 +1,24 @@
-<h1> Here is a list of posts for one user</h1>
+<div class="container user">
+      <div class="userPhoto margin">Author picture</div>
+      <div class="userInfo margin">
+        <h2><%= @author.name %></h2>
+        <p><%= "Number of posts: #{@author.posts_counter}"%></p>
+      </div>
+</div>
+
+<% @posts.each do |post|%>
+  <div class="margin posts">
+    <h3><%= link_to "Post # #{post.id}", user_post_path(@author.id, post.id)%></h3>
+    <p><%=post.text%></p>
+    <i><%="Comments #{post.comments_counter}, Likes #{post.likes_counter}"%></i>
+  </div>
+  <div class="margin bio">
+    <% post.comments_recent.each do |comment|%>
+      <%= "#{comment.author.name}: #{comment.text}"%><br><br>
+    <%end%>
+  </div>  
+<%end%>
+
+<div class="container">
+  <button type="button" class='button_footer'>Pagination</button>
+</div>

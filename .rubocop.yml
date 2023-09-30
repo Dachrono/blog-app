@@ -5,7 +5,7 @@ AllCops:
     - "Rakefile"
     - "node_modules/**/*"
     - "bin/**/*"
-    - "db/schema.rb"
+    - "db/**/*"
 
   DisplayCopNames: true
 

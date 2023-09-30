@@ -1,1 +1,11 @@
-<h1> Here is a description for a post for one user </h1>
+<div class="container margin desc">
+  <h1><%="Post #{@post.id} by #{@post.author.name}"%></h1>
+  <i><%="Comments: #{@post.comments_counter}, Likes #{@post.likes_counter}"%></i>
+  <p><%=@post.text%></p>  
+</div>
+
+<div class="posts margin">
+  <% @post.comments.each do |comment|%>
+    <%= "#{comment.author.name}: #{comment.text}"%><br><br>
+  <%end%>
+</div>
