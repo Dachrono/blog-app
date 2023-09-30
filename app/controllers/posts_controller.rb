@@ -13,12 +13,12 @@ class PostsController < ApplicationController
   end
 
   def new
-    @author = User.find(params[:user_id])
+    @author = current_user
     @post = Post.new
   end
 
   def create
-    @user = User.find(params[:user_id])
+    @user = current_user
     @post = @user.posts.build(post_data)
 
     if @post.save
