@@ -1,0 +1,18 @@
+<%= form_with(model: [@author, @post], url: user_posts_path(@author), method: :post) do |form| %>
+    <div class="margin posts form">
+        <h2>Create New Post for <%= @author.name %></h2>
+          <div class="form">
+            <%= form.label :title %>
+            <%= form.text_field :title %>
+          </div>
+  
+          <div class="form">
+            <%= form.label :text %>
+            <%= form.text_area :text %>
+          </div>
+  
+          <div class="form">
+            <%= form.submit 'Create Post' %>
+          </div>
+    </div>
+  <% end %>

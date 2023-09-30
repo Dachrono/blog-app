@@ -1,0 +1,13 @@
+<div class="con">
+<%= form_with(model: [@author, @post, @comment], url: user_post_comments_path(@author, @post), method: :post) do |form| %>
+  <div class="testArea">
+     <%= form.text_area :text %>
+  </div>
+
+  <div class="con">
+    <%= form.submit 'Add Comment', class: 'btn' %>
+  </div>
+<% end %>
+</div>
+</div>
+</div>
