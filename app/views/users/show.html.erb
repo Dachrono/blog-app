@@ -1,1 +1,24 @@
-<h1> Here is a description for one user </h1>
+<div class="container user">
+      <div class="userPhoto margin">User picture</div>
+      <div class="userInfo margin">
+        <h2><%= @users.name %></h2>
+        <p><%= "Number of posts: #{@users.posts_counter}"%></p>
+      </div>
+</div>
+
+<div class="margin bio">
+  <h3>Bio</h3><br>
+  <p><%= @users.bio%></p>
+</div>
+
+<% @users.post_recent.each do |post|%>
+  <div class="margin posts">
+    <h3><%= link_to "Post # #{post.id}", user_post_path(@users, post.id) %></h3>
+    <br><p><%= post.text %></p>
+    <br><i><%= "Comments #{post.comments_counter}, Likes #{post.likes_counter}"%></i>
+  </div>
+<%end %>
+
+<div class="container">
+  <%= link_to 'See all posts', user_posts_path(@users), class: 'button_footer' %>
+</button>
