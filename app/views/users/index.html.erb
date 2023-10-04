@@ -1,6 +1,7 @@
 <% @users.each do |user| %>
     <div class="container user">
-      <div class="userPhoto margin">User picture</div>
+      <div class="userPhoto margin"><%= image_tag("#{user.photo}", alt: 'Imagen externa') %>
+      </div>
       <div class="userInfo margin">
         <h2><%= link_to user.name, user %></h2>
         <p><%= "Number of posts: #{user.posts_counter}"%></p>

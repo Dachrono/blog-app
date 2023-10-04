@@ -22,7 +22,7 @@ RSpec.describe PostsController, type: :request do
 
     it 'includes correct placeholder text in the response body' do
       get @url
-      expect(response.body).to include('Here is a list of posts for one user')
+      expect(response.body).to include("#{@user.name}")
     end
   end
 
@@ -42,7 +42,7 @@ RSpec.describe PostsController, type: :request do
 
     it 'includes correct placeholder text in the response body' do
       get @url
-      expect(response.body).to include('Here is a description for a post for one user')
+      expect(response.body).to include("#{@user.name}")
     end
   end
 end
