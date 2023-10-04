@@ -1,6 +1,7 @@
 <div class="container margin desc">
   <h1><%="Post #{@post.id} by #{@post.author.name}"%></h1>
   <i><%="Comments: #{@post.comments_counter}, Likes #{@post.likes_counter}"%></i>
+  <p>Title of post: <%=@post.title%></p> 
   <p><%=@post.text%></p>  
 </div>
 
