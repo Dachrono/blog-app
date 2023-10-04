@@ -18,7 +18,7 @@ RSpec.describe 'Users', type: :request do
 
     it 'includes correct placeholder text in the response body' do
       get @url
-      expect(response.body).to include("#{@user.name}")
+      expect(response.body).to include(@user.name.to_s)
     end
   end
 
@@ -34,7 +34,7 @@ RSpec.describe 'Users', type: :request do
 
     it 'includes correct placeholder text in the response body' do
       get user_url(@user)
-      expect(response.body).to include("#{@user.name}")
+      expect(response.body).to include(@user.name.to_s)
     end
   end
 end
