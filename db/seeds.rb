@@ -22,6 +22,6 @@ post2_3 = Post.create(author: user3, title: 'Hello again', text: 'This is my sec
 post3_3 = Post.create(author: user3, title: 'Hello again, again', text: 'This is my third post')
 post4_3 = Post.create(author: user3, title: 'Hello again, again, again', text: 'This is my fourth post')
 
-Comment.create(post: post1, author: user3, text: 'Hi nice!' )
-Comment.create(post: post1_2, author: user1, text: 'Hi interesting!' )
-Comment.create(post: post1_3, author: user2, text: 'Hi awesome!' )
+#Comment.create(post: post1, author: user3, text: 'Hi nice!' )
+#Comment.create(post: post1_2, author: user1, text: 'Hi interesting!' )
+#Comment.create(post: post1_3, author: user2, text: 'Hi awesome!' )

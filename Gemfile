@@ -13,6 +13,8 @@ gem 'selenium-webdriver'
 
 gem 'pry'
 
+gem 'devise'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.8'
 
@@ -71,6 +73,7 @@ end
 
 group :development, :test do
   gem 'capybara'
+  gem 'letter_opener'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'webdrivers'
