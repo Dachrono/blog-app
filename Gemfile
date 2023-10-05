@@ -7,6 +7,12 @@ gem 'rails-controller-testing'
 
 gem 'bundler', '~> 2.4', '>= 2.4.19'
 
+gem 'rack', '2.2.8'
+
+gem 'selenium-webdriver'
+
+gem 'pry'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.8'
 
@@ -64,11 +70,8 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
-end
-
-group :test do
   gem 'capybara'
   gem 'rspec'
-  gem 'selenium-webdriver'
+  gem 'rspec-rails'
+  gem 'webdrivers'
 end

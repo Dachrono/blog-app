@@ -1,5 +1,5 @@
 <div class="container user">
-      <div class="userPhoto margin">Author picture</div>
+      <div class="userPhoto margin"><%= image_tag("#{@author.photo}", alt: 'Imagen externa') %></div>
       <div class="userInfo margin">
         <h2><%= @author.name %></h2>
         <p><%= "Number of posts: #{@author.posts_counter}"%></p>
@@ -13,7 +13,7 @@
     <i><%="Comments #{post.comments_counter}, Likes #{post.likes_counter}"%></i>
   </div>
   <div class="margin bio">
-    <% post.comments_recent.each do |comment|%>
+    <% post.comments.each do |comment|%>
       <%= "#{comment.author.name}: #{comment.text}"%><br><br>
     <%end%>
   </div>  
@@ -21,5 +21,5 @@
 
 <div class="container">
   <button class='button_footer'><%= link_to 'Create new Post', new_user_post_path(@author) %></button>    
-  <button type="button" class='button_footer'>Pagination</button>
+  <button type="button" class='button_footer two'>Pagination</button>
 </div>
