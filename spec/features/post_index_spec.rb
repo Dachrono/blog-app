@@ -54,4 +54,16 @@ RSpec.describe 'Posts index page', type: :feature do
     visit user_posts_path(@user1)
     expect(page).to have_content("Likes #{@post1.likes_counter}")
   end
+
+  it 'I can see a section for pagination if there are more posts than fit on the view.' do
+    visit user_posts_path(@user1)
+    expect(page).to have_selector('button', text: 'Pagination')
+    find('.two').click
+  end
+  
+  it 'When I click on a post, it redirects me to that posts show page.' do
+    visit user_posts_path(@user1)
+    click_link "Post # #{@post1.id}"
+    expect(page).to have_current_path(user_post_path(@user1.id, @post1.id))
+  end  
 end
