@@ -60,10 +60,10 @@ RSpec.describe 'Posts index page', type: :feature do
     expect(page).to have_selector('button', text: 'Pagination')
     find('.two').click
   end
-  
+
   it 'When I click on a post, it redirects me to that posts show page.' do
     visit user_posts_path(@user1)
     click_link "Post # #{@post1.id}"
     expect(page).to have_current_path(user_post_path(@user1.id, @post1.id))
-  end  
+  end
 end

@@ -42,5 +42,5 @@ RSpec.describe 'User show page', type: :feature do
     visit user_path(@user1)
     click_link "Post # #{@post1.id}"
     expect(page).to have_current_path(user_post_path(@user1.id, @post1.id))
-  end  
+  end
 end
