@@ -1,0 +1,19 @@
+.credentials {
+  display: flex;
+  padding-right: 20px;
+  flex-direction: column;
+  align-items: end;
+}
+
+.indexTitle {
+  background-color: rgba(0, 255, 238, 0.536);
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  padding: 10px;
+}
+
+.buttonsCred {
+  width: 80px;
+  margin: 5px;
+}

@@ -1,0 +1,11 @@
+.forgPass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forgPass h2 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 40px;
+}
