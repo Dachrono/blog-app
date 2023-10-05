@@ -1,0 +1,26 @@
+.signin {
+  margin: 50px;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.item {
+  width: 70%;
+}
+
+.linkOpt {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
