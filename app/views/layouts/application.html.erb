@@ -11,6 +11,14 @@
   </head>
 
   <body>
+  <div class="credentials">
+    <% if user_signed_in? %>
+      <button class='buttonsCred'><%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete } %></button>
+    <% else %>
+      <p> If you have account, you can <button class='buttonsCred'><%= link_to 'Sign In', new_user_session_path %></button></p>
+      <p> If not, you can create new one<button class='buttonsCred'><%= link_to 'Sign Up', new_user_registration_path %></button></p>
+    <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
