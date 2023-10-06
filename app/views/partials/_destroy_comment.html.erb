@@ -1,0 +1,3 @@
+<% if can?(:destroy, comment) %>
+      <%= button_to 'Delete comment', user_post_comment_path(post.author, post, comment), method: :delete, remote: true %>
+<% end %>

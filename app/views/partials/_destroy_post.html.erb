@@ -1,0 +1,3 @@
+<% if can?(:destroy, post) %>
+      <%= button_to 'Delete Post', user_post_path(post.author, post), method: :delete, remote: true %>
+<% end %>
