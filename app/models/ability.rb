@@ -10,13 +10,13 @@ class Ability
       can :destroy, Post, Author_id: user.id
 
       can :create, Comment
-      can :update, Comment, users_id: user.id 
+      can :update, Comment, users_id: user.id
       can :destroy, Comment, users_id: user.id
-    end  
+    end
 
     return unless user.role == 'admin'
-    can :manage, :all
 
+    can :manage, :all
 
     # Define abilities for the user here. For example:
     #

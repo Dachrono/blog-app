@@ -13,5 +13,4 @@ Rails.application.routes.draw do
       resources :likes, only: %i[new create]
     end
   end
-
 end

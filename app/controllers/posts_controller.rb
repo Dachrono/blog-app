@@ -34,10 +34,10 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     activeuser = params[:user_id]
     if post.destroy
-    #  flash[:success] = 'The Post was deleted successfully!'
+      #  flash[:success] = 'The Post was deleted successfully!'
       redirect_to user_posts_path(activeuser)
     else
-    #  flash[:error] = 'Error! The Post was not deleted'
+      #  flash[:error] = 'Error! The Post was not deleted'
       redirect_to user_post_path(activeuser, post)
     end
   end
