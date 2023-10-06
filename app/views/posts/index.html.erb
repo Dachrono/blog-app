@@ -8,13 +8,20 @@
 
 <% @posts.each do |post|%>
   <div class="margin posts">
+    <div class="comments">
     <h3><%= link_to "Post # #{post.id}", user_post_path(@author.id, post.id)%></h3>
+    <%= render 'partials/destroy_post', post: post %>
+    </div>
     <p><%=post.text%></p>
     <i><%="Comments #{post.comments_counter}, Likes #{post.likes_counter}"%></i>
   </div>
   <div class="margin bio">
+    <h2>Comments</h2>
     <% post.comments.each do |comment|%>
+      <div class="comments">
       <%= "#{comment.author.name}: #{comment.text}"%><br><br>
+      <%= render 'partials/destroy_comment', post: post, comment: comment %>
+      </div>
     <%end%>
   </div>  
 <%end%>
