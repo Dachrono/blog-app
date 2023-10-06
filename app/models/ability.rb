@@ -6,17 +6,17 @@ class Ability
 
     if user.present?
       can :create, Post
-      can :update, Post, author_id: user.id
-      can :destroy, Post, author_id: user.id
+      can :update, Post, Author_id: user.id
+      can :destroy, Post, Author_id: user.id
 
       can :create, Comment
-      can :update, Comment, user_id: user.id 
-      can :destroy, Comment, user_id: user.id
+      can :update, Comment, users_id: user.id 
+      can :destroy, Comment, users_id: user.id
     end  
 
     return unless user.role == 'admin'
     can :manage, :all
-    
+
 
     # Define abilities for the user here. For example:
     #
