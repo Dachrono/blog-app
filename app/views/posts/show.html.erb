@@ -5,11 +5,14 @@
   <p><%=@post.text%></p>  
 </div>
 
-<div class="posts margin">
+<div class="posts margin contComm">
   <h2>Comments</h2>
-  <% @post.comments.each do |comment|%>
-    <%= "#{comment.author.name}: #{comment.text}"%><br><br>
-  <%end%>
+    <% @post.comments.each do |comment|%>
+      <div class="comments">
+      <%= "#{comment.author.name}: #{comment.text}"%><br /><br />
+      <%= render 'partials/destroy_comment', post: @post, comment: comment %>
+      </div>
+    <%end%>
 </div>
 
 <div class="form">

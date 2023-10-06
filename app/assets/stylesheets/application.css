@@ -18,6 +18,7 @@
 @import "user_sign";
 @import "user_signup";
 @import "pass_recov";
+@import "post_show";
 
 * {
   box-sizing: border-box;
